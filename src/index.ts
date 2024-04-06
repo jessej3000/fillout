@@ -68,8 +68,8 @@ app.get(
             result = filterResponse(responseData.responses, filtersObj);
         }
 
-        // responseData.responses = result;
-        // responseData.totalResponses = result.length;
+        responseData.responses = result;
+        responseData.totalResponses = result.length;
         res.json(responseData);
       } catch (error) {
         console.error('Error processing data from external API:', error);
